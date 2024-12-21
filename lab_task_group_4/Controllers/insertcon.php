@@ -1,0 +1,11 @@
+<?php
+session_start();
+require_once('../Models/alldb.php');
+  $id=$_GET['delete'];
+  $status=delete($id);
+  if($status)
+  {
+    header("location:../Views/in.php");
+   //$_SESSION['mess']="Deleted";
+  }
+?>
